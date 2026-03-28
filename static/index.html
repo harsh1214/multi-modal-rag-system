@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RAG Search</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body
+        class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+
+        <div class="w-full max-w-2xl px-4 py-20">
+            <h1 class="text-3xl font-bold text-center mb-6">Search</h1>
+            <div class="flex gap-2">
+                <input id="queryInput" type="text" placeholder="Ask anything..." class="w-full p-3 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none" />
+                <button onclick="handleSearch()" class="bg-blue-600 px-4 rounded-xl hover:bg-blue-700">Search</button>
+            </div>
+            <div id="loading" class="hidden mt-4 text-center text-gray-400">Searching...</div>
+            <div id="answerBox" class="mt-6 hidden">
+                <h2 class="text-xl font-semibold mb-2">Answer</h2>
+                <div id="answer" class="bg-gray-800 p-4 rounded-xl"></div>
+            </div>
+        </div>
+
+        <script>
+            async function handleSearch() {
+                const query = document.getElementById("queryInput").value.trim();
+                if (!query) {
+                    alert("Enter a query");
+                    return;
+                }
+                document.getElementById("loading").classList.remove("hidden");
+                document.getElementById("answerBox").classList.add("hidden");
+                try {
+                    const response = await fetch(`http://localhost:8000/search?query=${encodeURIComponent(query)}`);
+                    const data = await response.json();
+                    document.getElementById("answer").innerText = data.answer || "No answer";
+                    document.getElementById("answerBox").classList.remove("hidden");
+                } catch (err) {
+                    console.error(err);
+                    alert("Error fetching results");
+                }
+                document.getElementById("loading").classList.add("hidden");
+            }
+            document.getElementById("queryInput").addEventListener("keypress", function(e) {
+                if (e.key === "Enter") {
+                    handleSearch();
+                }
+            });
+        </script>
+
+    </body>
+</html>

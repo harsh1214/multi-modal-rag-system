@@ -1,0 +1,43 @@
+Back in 2020, having heard so much about the infamous, “Neural Networks” (NN), I was determined to learn and understand the mathematical underpinnings of the algorithm. To my surprise, it was quite simple. I had made a monster of the algorithm even before I started. Through this blog, I hope to explain the motivation behind NN and disintegrate it into simpler pieces for laymen.
+
+I, personally, am not a huge fan of the analogy drawn between NN and the human brain, the human brain is way more complex. The analogy can be misleading and doesn’t do justice to the beauty and efficiency of Neural Networks.
+
+This blog is not meant to be a comprehensive guide to NN, but rather offers a fresh perspective on the core ideas and logic to beginners.
+
+Alright, let’s start with the building block of a Neural Network: the neuron.
+
+The Single Neuron: A Tiny Decision-Maker
+Think of a neuron as a tiny decision-maker. It takes input, processes it, and produces an output. In the context of a Neural Network, this input could be anything from the pixels of an image to the numerical features of a dataset. Each input is assigned a weight, which determines its importance in the decision-making process.
+
+The neuron does only two things:
+
+Weighted sum of inputs: w1*x1 + w2*x2
+Non-linear transformation: ActivationFunc(w1*x1 + w2*x2)
+Connections: The Neural Network’s Communication Channels
+Neurons in a Neural Network are connected through connections. These connections, represented by weights, are the pathways through which information flows.
+
+Activation Function
+The activation function introduces non-linearity, allowing the Neural Network to learn and adapt to intricate patterns in the data. It decides whether the neuron should be activated and pass on its signal to the next layer of neurons. There are various activation functions, each serving a specific purpose. The sigmoid function, for example, squashes the output between 0 and 1, making it useful for binary classification problems. On the other hand, the hyperbolic tangent (tanh) function squashes the output between -1 and 1, allowing for a broader range of values.
+
+Logistic Regression as a Simple Neural Network
+To understand Neural Networks better, let’s draw a parallel with logistic regression. Logistic regression can be seen as a rudimentary version of a Neural Network — it is a single-layered, one-neuron network.
+
+In the above single neuron, we compute the weighted sum of inputs and apply the sigmoid activation function, this is logistic regression. The power of NN lies in being able to combine multiple neurons to model the most complex non-linear relationships.
+
+In the above diagram, we can see how combining two neurons gives us a completely different function. Adding more neurons and layers can allow us to model increasingly complex functions.
+
+Backpropagation
+Backpropagation is a method of teaching a neural network to make better predictions. Till now we have learnt that a neural network is a collection of small building blocks called neurons, which are connected by weights. Each neuron takes some inputs, multiplies them by the weights, and produces an output.
+
+The output of the network depends on the values of the weights. To train the network, we want to adjust the weights so that the output matches the desired answer for a given input.
+
+To do this, we need a way to measure how much the output differs from the answer. This difference is called the error or the loss. The smaller the error, the better the network is performing.
+
+We also need a way to change the weights in the right direction, so that the error decreases. This is where the delta comes in. The delta is a number that tells us how much a change in a neuron’s output affects the error. The delta is calculated using a formula that involves the derivative of the error and the derivative of the neuron’s activation function (which is a function that shapes the output of the neuron).
+
+The delta is different for each neuron, and it depends on the delta of the neurons that receive its output. This means that we have to start from the output layer of the network, where the error is directly computed, and work our way backwards to the input layer, finding the delta for each neuron along the way. This is the backpropagation algorithm.
+
+Once we have the deltas for all the neurons, we can use them to update the weights. For each weight, we compute the partial derivative of the error wrt to that weight: we multiply the delta of the neuron it connects to by the output of the neuron it comes from (see the diagram below). This is then multiplied by a small number called the learning rate. This gives us the amount to add to the weight to make it better (read to decrease the error). We repeat this process for every weight in the network.
+
+Hope this further solidified your understanding of neural networks. We keep updating the weights using the training data until the error stops decreasing or starts increasing.
+

@@ -1,0 +1,32 @@
+Machine learning is the subset of artificial intelligence (AI) focused on algorithms that can “learn” the patterns of training data and, subsequently, make accurate inferences about new data. This pattern recognition ability enables machine learning models to make decisions or predictions without explicit, hard-coded instructions.
+
+Machine learning has come to dominate the field of AI: it provides the backbone of most modern AI systems, from forecasting models to autonomous vehicles to large language models (LLMs) and other generative AI tools.
+
+The central premise of machine learning (ML) is that if you optimize a model’s performance on a dataset of tasks that adequately resemble the real-world problems it will be used for—through a process called model training—the model can make accurate predictions on the new data it sees in its ultimate use case.
+
+Training itself is simply a means to an end: generalization, the translation of strong performance on training data to useful results in real-world scenarios, is the fundamental goal of machine learning. In essence, a trained model is applying patterns it learned from training data to infer the correct output for a real-world task: the deployment of an AI model is therefore called AI inference.
+
+Deep learning, the subset of machine learning driven by large—or rather, “deep”—artificial neural networks, has emerged over the past few decades as the state-of-the-art AI model architecture across nearly every domain in which AI is used. In contrast to the explicitly defined algorithms of traditional machine learning, deep learning relies on distributed “networks” of mathematical operations that provide an unparalleled ability to learn the intricate nuances of very complex data. Because deep learning requires very large amounts of data and computational resources, its advent has coincided with the escalated importance “big data” and graphics processing units (GPUs).   
+
+The discipline of machine learning is closely intertwined with that of data science. In a sense, machine learning can be understood as a collection of algorithms and techniques to automate data analysis and (more importantly) apply learnings from that analysis to the autonomous execution of relevant tasks.
+
+The origin of the term (albeit not the core concept itself) is often attributed to Arthur L. Samuel’s 1959 article in IBM Journal, “Some Studies in Machine Learning Using the Game of Checkers.” In the paper’s introduction, Samuel neatly articulates machine learning’s ideal outcome: “a computer can be programmed so that it will learn to play a better game of checkers than can be played by the person who wrote the program.”1
+
+Machine learning vs. artificial intelligence
+Though “machine learning” and “artificial intelligence” are often used interchangeably, they are not quite synonymous. In short: all machine learning is AI, but not all AI is machine learning.
+
+In the popular imagination, “AI” is usually associated with science fiction—typically through depictions of what’s more properly called artificial general intelligence (AGI), like HAL 9000 in 2001: A Space Odyssey or Ava in Ex Machina—or, more recently, with generative AI. But “artificial intelligence” is a catch-all term for any program that can use information to make decisions or predictions without active human involvement.
+
+The most elementary AI systems are a series of if-then-else statements, with rules and logic programmed explicitly by a data scientist.  At the simplest level, even a rudimentary thermostat is a rules-based AI system: when programmed with simple rules like 
+
+IF room_temperature < 67, THEN turn_on_heater
+
+and 
+
+IF room_temperature > 72, THEN turn_on_air_conditioner
+
+the thermostat is capable of autonomous decision-making without further human intervention. At a more complex level, a large and intricate rules-based decision tree programmed by medical experts could parse symptoms, circumstances and comorbidities to aid diagnosis or prognosis.2
+
+Unlike in expert systems, the logic by which a machine learning model operates isn’t explicitly programmed—it’s learned through experience. Consider a program that filters email spam: rules-based AI requires a data scientist to manually devise accurate, universal criteria for spam; machine learning requires only the selection of an appropriate algorithm and an adequate dataset of sample emails. In training, the model is shown sample emails and predicts which are spam; the error of its predictions is calculated, and its algorithm is adjusted to reduce error; this process is repeated until the model is accurate. The newly trained ML model has implicitly learned how to identify spam.
+
+As the tasks an AI system is to perform become more complex, rules-based models become increasingly brittle: it’s often impossible to explicitly define every pattern and variable a model must consider. Machine learning systems have emerged as the dominant mode of artificial intelligence because implicit learning patterns from the data itself is inherently more flexible, scalable and accessible.

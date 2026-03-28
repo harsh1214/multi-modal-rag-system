@@ -1,0 +1,50 @@
+Machine learning, a subset of artificial intelligence, has its own subset, deep learning, to help it match and exceed human abilities through enhanced compute power. 
+
+In this blog, you'll learn more about deep learning (DL) and how it uses data input to solve complex problems and deliver actionable insights in real-time.
+
+What is deep learning (DL)?
+A subset of machine learning, deep learning (DL) trains computers to perform human tasks like speech recognition, image identification, and prediction making. 
+
+It improves the ability to classify, recognize, detect, and describe using data input.
+
+There has been an increased interest in DL as artificial intelligence (AI) has risen in popularity. 
+
+Why is DL important?
+Deep learning algorithms can process large numbers of features, making them very powerful when dealing with unstructured data. 
+
+A lot of computational power is needed to solve DL problems, as algorithms possess many layers, and large volumes of data are needed to train the networks.
+
+When dealing with vast amounts of data, these algorithms can be very helpful for solving complex problems. 
+
+Additionally, DL methods can continuously improve and adapt to changes in underlying information patterns, introducing more dynamic behavior into data analytics.
+
+How does DL work?
+With DL, data trains the computer through algorithms to learn on its own by recognizing patterns using layers of processing. 
+
+DL changes the way people think about representing the problems you are solving with analytics. Instead of telling a computer how to solve a problem, it trains the computer to solve the problem itself. 
+
+Here are three primary features of deep learning: 
+
+Feature representation: DL is a paradigm shift in the model building that moves from feature engineering to feature representation. 
+Deep learning layers: Instead of using known variables to predict unknowns, DL looks at layers of data to recognize latent features. 
+Deep learning results: The promise of DL is that it can lead to predictive systems that generalize well, adapt well, and continuously improve as data arrives. 
+What supports DL?
+There are several developments that have helped to advance deep learning:
+
+Analytical improvements have boosted the performance of DL methods. 
+New machine learning approaches have improved the accuracy of DL models. 
+New classes of neural networks have been developed that fit well for applications like text translation and image classification. 
+A lot more data is available to build neural networks with many deep layers. 
+Computational advances of distributed cloud computing and graphical processing units have put incredible computing power at users' disposal. 
+What are the downsides of DL?
+There are, however, some drawbacks to deep learning:
+
+It requires large amounts of data in order to perform well. 
+DL algorithms are extremely expensive to train due to complex data models. Additionally, it requires expensive GPUs and hundreds of machines. 
+It is not easy to comprehend output and requires classifiers to do so. (This is where neural networks play a huge role.)
+Conclusion
+At its core, deep learning empowers high-performance compute solutions to deliver actionable insights in real-time through recognition, identification, and prediction-making capabilities. 
+
+With increased computational power, DL helps to increase situational awareness and strengthen knowledge of adversary and environment, shortening the time between detection and response. 
+
+From the control room to the battlefield, deep learning enables our warfighters with the critical data necessary to detect, track, and engage with enemy threats.
