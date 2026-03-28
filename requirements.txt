@@ -1,17 +1,17 @@
 fastapi
-langchain
-langchain-core
-langchain-community
-langchain-groq
-sentence-transformers
-chromadb
-python-dotenv
-pathlib
-qdrant-client
-pypdf
-numpy
-torch
-torchaudio
-torchvision
+# langchain
+# langchain-core
+# langchain-community
+# langchain-groq
+# sentence-transformers
+# chromadb
+# python-dotenv
+# pathlib
+# qdrant-client
+# pypdf
+# numpy
+# torch
+# torchaudio
+# torchvision
 uvicorn
-pytesseract
+# pytesseract
