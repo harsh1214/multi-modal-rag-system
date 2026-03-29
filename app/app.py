@@ -5,15 +5,14 @@ from app.vector_db import QdrantManager
 pipeline = EmbeddingPipeline()
 db = QdrantManager()
 
-def load_data(path: str = "./data"):
-    if not db.collection_exist():
-        loader = DocumentLoader(path)
-        data = loader.load()
-        embedded_data = pipeline.process(data)
-        vector_size = len(embedded_data[0]["embedding"])
-        db.create_collection(vector_size)
-        db.upsert(embedded_data)
-    return loader.load()
+def upload_data(path: str = "./data"):
+    # if not db.collection_exist():
+    loader = DocumentLoader(path)
+    data = loader.load()
+    embedded_data = pipeline.process(data)
+    vector_size = len(embedded_data[0]["embedding"])
+    db.create_collection(vector_size)
+    db.upsert(embedded_data)
 
 def search_query(query_text: str = "What is DL?"):
     query = pipeline.model.encode([query_text], normalize_embeddings=True, show_progress_bar=False)[0]
