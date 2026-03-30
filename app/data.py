@@ -11,19 +11,14 @@ class DocumentLoader:
 
     def load(self) -> List[Dict[str, any]]:
         docs = []
-
         for file in self.path.rglob("*"):
             if not file.is_file():
                 continue
-
             try:
                 content = self._read_file(file)
-
                 if not content:
                     continue
-
                 doc_hash = hashlib.md5(content.encode("utf-8")).hexdigest()
-                
                 docs.append({
                     "id": str(file),
                     "content": content,
@@ -34,10 +29,8 @@ class DocumentLoader:
                         "path": str(file)
                     }
                 })
-
             except Exception as e:
                 print(f"Error: {e}")
-
         return docs
 
     def _read_file(self, file: Path) -> str:
