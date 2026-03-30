@@ -6,9 +6,9 @@ import hashlib
 import uuid
 
 class EmbeddingPipeline:
-    def __init__(self, chunk_size: int = 500, chunk_overlap: int = 100, model_name: str = "paraphrase-MiniLM-L3-v2", batch_size: int = 64, normalize: bool = True):
+    def __init__(self, chunk_size: int = 500, chunk_overlap: int = 100, model_name: str = "all-MiniLM-L6-v2", batch_size: int = 64, normalize: bool = True):
         self.splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap, separators=["\n\n", "\n", " ", ""])
-        self.model = SentenceTransformer(model_name, device="cpu")
+        self.model = SentenceTransformer(model_name)
         self.batch_size = batch_size
         self.normalize = normalize
 
