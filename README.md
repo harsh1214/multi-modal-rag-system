@@ -1,8 +1,8 @@
-# 🧠 Multi-Modal RAG System
+## 🧠 Multi-Modal RAG System
 
 A production-ready Retrieval-Augmented Generation (RAG) system built with FastAPI, Qdrant, and Sentence Transformers.
 
-## 🚀 Features
+### 🚀 Features
 - Document ingestion pipeline (offline)
 - Smart chunking & embedding
 - Qdrant vector database integration
@@ -10,7 +10,7 @@ A production-ready Retrieval-Augmented Generation (RAG) system built with FastAP
 - Lightweight frontend (HTML + Tailwind)
 - Lazy model loading for deployment efficiency
 
-## 🏗️ Architecture
+### 🏗️ Architecture
 
 Offline (Ingestion)
 Documents → Chunk → Embed → Qdrant Cloud
@@ -18,7 +18,7 @@ Documents → Chunk → Embed → Qdrant Cloud
 Online (Query)
 User Query → Embed → Search Qdrant → Return Results
 
-## 📁 Project Structure
+### 📁 Project Structure
 
 app/
 ├── main.py
@@ -32,27 +32,27 @@ static/
 
 requirements.txt
 
-## ⚙️ Setup
+### ⚙️ Setup
 
 1. Clone repo
 2. Create virtual environment
 3. Install dependencies
 
-## 🔐 Environment Variables
+### 🔐 Environment Variables
 
 QDRANT_URL=your_qdrant_url
 QDRANT_API_KEY=your_api_key
 QDRANT_COLLECTION=your_collection_name
 
-## ▶️ Run API
+### ▶️ Run API
 
 uvicorn app.main:app --reload
 
-## 🔍 API
+### 🔍 API
 
 GET /search?query=your_query
 
-## 🚧 Notes
+### 🚧 Notes
 
 - Do NOT run ingestion in API
 - Use Qdrant Cloud
