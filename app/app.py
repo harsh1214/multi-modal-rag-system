@@ -1,4 +1,4 @@
-# from app.data import DocumentLoader
+from app.data import DocumentLoader
 from app.embedding import EmbeddingPipeline
 from app.vector_db import QdrantManager
 
@@ -17,24 +17,24 @@ def get_db():
         db = QdrantManager()
     return db
 
-# def upload_data(path: str = "./data"):
-#     print("Loading documents...")
-#     loader = DocumentLoader(path)
-#     docs = loader.load()
+def upload_data(path: str = "./data"):
+    print("Loading documents...")
+    loader = DocumentLoader(path)
+    docs = loader.load()
 
-#     print("Embedding...")
-#     pipeline = EmbeddingPipeline()
-#     embedded = pipeline.process(docs)
+    print("Embedding...")
+    pipeline = EmbeddingPipeline()
+    embedded = pipeline.process(docs)
 
-#     print("Uploading to Qdrant...")
-#     db = QdrantManager()
+    print("Uploading to Qdrant...")
+    db = QdrantManager()
 
-#     vector_size = len(embedded[0]["embedding"])
+    vector_size = len(embedded[0]["embedding"])
 
-#     if not db.collection_exist():
-#         db.create_collection(vector_size)
+    if not db.collection_exist():
+        db.create_collection(vector_size)
 
-#     db.upsert(embedded)
+    db.upsert(embedded)
 
 def search_query(query_text: str = "What is DL?"):
     pipeline = get_pipeline()
