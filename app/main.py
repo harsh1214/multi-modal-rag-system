@@ -10,7 +10,11 @@ INDEX_URL = path / "static" / "index.html"
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://multi-modal-rag-system-rpli.onrender.com/"],
+    allow_origins=[
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
+        "https://multi-modal-rag-system-rpli.onrender.com"
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )

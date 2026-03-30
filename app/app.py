@@ -18,13 +18,23 @@ def get_db():
     return db
 
 def upload_data(path: str = "./data"):
+    print("Loading documents...")
+    loader = DocumentLoader(path)
+    docs = loader.load()
+
+    print("Embedding...")
+    pipeline = EmbeddingPipeline()
+    embedded = pipeline.process(docs)
+
+    print("Uploading to Qdrant...")
+    db = QdrantManager()
+
+    vector_size = len(embedded[0]["embedding"])
+
     if not db.collection_exist():
-        loader = DocumentLoader(path)
-        data = loader.load()
-        embedded_data = pipeline.process(data)
-        vector_size = len(embedded_data[0]["embedding"])
         db.create_collection(vector_size)
-        db.upsert(embedded_data)
+
+    db.upsert(embedded)
 
 def search_query(query_text: str = "What is DL?"):
     pipeline = get_pipeline()
